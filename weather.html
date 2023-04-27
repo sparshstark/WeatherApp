@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="./script.js" defer></script>
+</head>
+<style>
+  body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url("img/beaches1.jpg");
+    background-size:cover;
+    font-size: 120%;
+    flex-wrap: wrap;
+  }
+
+  
+  .card1 {
+    justify-content: flex-start;
+    align-items: center;
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+  }
+
+  .card2 {
+    justify-content: flex-end;
+    align-items: center;
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+  }
+  
+  button:hover {
+    background: #7c7c7c6b;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+
+  h1.temp1 {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .flex {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+
+  .container{
+    justify-content: baseline;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .humidity{
+    border: black 4px;
+  }
+
+  .point3{
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 5.5vw;
+    color: rgb(0, 0, 0);
+  }
+
+  nav{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: large;
+    height: 10vh;
+  }
+  .navbar-brand{
+    color: rgb(0, 0, 0);
+    margin-right: 25px;
+    font-size: xx-large;
+    font-family: 'Covered By Your Grace', cursive;
+  }
+
+  a.nav-link{
+    margin-right: 3vw;
+    margin-left: 3vw;
+    color: rgb(0, 0, 0);
+    font-family: 'Cookie', cursive;
+    font-size: xx-large;
+  }
+
+  .nav-link:hover{
+    color: rgb(1, 0, 0);
+    background-color: #ffa600;
+  }
+
+  .flexers{
+    margin-top: 12vh;
+    margin-bottom: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .samarthan{
+    margin-right: 10vw;
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://aws.amazon.com/">
+        <img src="img/taco2.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
+      </a>
+      <div class="samarthan"><a class="navbar-brand" href="#">CBES</a></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://www.google.com">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="https://www.youtube.com">Bored</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://www.github.com">Projects?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://www.instagram.com">Lone?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+ </nav>
+  <div class="flexers">
+  <div class="card1">
+      <h2 class="city"></h2>
+      <h1 class="temp"></h1>
+      <div class="flex">
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+          <div class="description"></div>
+        <div class="humidity"></div>
+        <div class="wind"></div>
+      </div>
+    </div>
+  <div class="card2">
+      <h2 class="city1"></h2>
+      <h1 class="temp1"></h1>
+      <div class="flex">
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon1" />
+          <div class="description1"></div>
+        <div class="humidity1"></div>
+        <div class="wind1"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="point3">
+     Connecting the cities close to you !
+  </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
